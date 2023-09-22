@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../src/img/Libro_de_Hechizos_Abierto_rune.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/modoOscuro.css" type="text/css">
+    <title>Magic the Gathering</title>
+</head>
+<body>
+    <div class="cabecera" style="padding: 0%;">
+        <header id="capa1">
+            <div class="imagen">
+                <a href="../index.html"><img src="../src/img/Libro_de_Hechizos_Abierto_rune.png" class="inicial"></a>
+            </div>
+            <p class="superior">Mis hobbies</p>
+            <ul align="right">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../HTML/Magic.html">MTG</a></li>
+                <li><a href="../HTML/dnd.html">D&D</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="cuerpo">
+        <!--Sección con las imagenes del maná-->
+        <div align="center">
+            <h1>Colores de maná</h1>
+            <h3>Las seis representaciones del maná</h3>
+            <section>
+                <img onclick="cambiarDescripcionBlanco()" id="blanco" src="../src/img/ManaBlanco.png" alt="Maná Blanco">
+                <img onclick="cambiarDescripcionAzul()" id="azul" src="../src/img/ManaAzul.png" alt="Maná Azul">
+                <img onclick="cambiarDescripcionNegro()" id="negro" src="../src/img/ManaNegro.png" alt="Maná Negro">
+                <img onclick="cambiarDescripcionRojo()" id="rojo" src="../src/img/ManaRojo.png" alt="Maná Rojo">
+                <img onclick="cambiarDescripcionVerde()" id="verde" src="../src/img/ManaVerde.png" alt="Maná Verde">
+                <img onclick="cambiarDescripcionIncoloro()" id="incoloro" src="../src/img/ManaIncoloro.png" alt="Maná Incoloro">
+            </section>
+        </div>
+        <h1 id="tituloColor">Seleccione la combinación de su preferencia.</h1>
+        <p id="descripcionColor"></p>
+        
+        <!--Sección para el cálculo de la curva de maná-->
+        <div>
+            <h1 style="margin-top: 100px;">La curva de maná</h1>
+            <p>
+                Una de las cosas más importantes de un mazo es la curva de maná. Normalmente, se suelen llevar muchos hechizos de coste 1, 2 y 3; y alguno de coste mayor (Siendo estos la mínoría). <br><br>
+                Calcule aquí abajo la curva de maná de su mazo y la cantidad de tierras necesarias.
+            <br><br><br>
+            </p>
+            Coste:<input id="coste" type="number" placeholder="2">
+            Cantidad:<input id="cantidad" type="number" placeholder="12">
+            <input onclick="anyadirCostes()" type="submit" value="Añadir">
+            <h2 id="resultado">Coste medio: 0</h2>
+            <h3 id="totalST">Cartas totales (Sin tierras): 0</h3>
+            <h3 id="tierras">Tierras recomendadas (sin robo de carta): 0</h3>
+            <h3 id="total">Cartas totales: 0</h3>
+        </div>
+    </div>
+    <div class="pie">
+        <footer>
+            <img src="../src/img/we_love_casting_spells.png" alt="We love casting spells" class="lateralIzquierdo">
+            <table>
+                <tbody>
+                    <thead>
+                        <th>Información del alumno</th>
+                        <th>Webgrafía</th>
+                        <th>Feedback</th>
+                        <th></th>
+                    </thead>
+                    <tr>
+                        <td>Raúl Herrá Velasco</td>
+                        <td><a href="https://magic.wizards.com/es">Magic the Gathering</a></td>
+                        <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacta conmigo</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>raulhv105@gmail.com</td>
+                        <td><a href="https://dnd.wizards.com/es">Dungeons and Dragons</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h5 class="final" align="center">@Derechos reservados de los productos mencionados 1993-2023 Wizards of the coast<br>
+                @Código creado por Raúl Herrá Velasco</h5>
+        </footer>
+    </div>
+    <script src="../JS/mtg.js"></script>
+</body>

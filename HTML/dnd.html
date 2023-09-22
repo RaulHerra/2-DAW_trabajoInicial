@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../src/img/Libro_de_Hechizos_Abierto_rune.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/modoOscuro.css" type="text/css">
+    <title>Dungeons and Dragons</title>
+    
+</head>
+<body>
+    <div class="cabecera" style="padding: 0%;">
+        <header id="capa1">
+            <div class="imagen">
+                <a href="../index.html"><img src="../src/img/Libro_de_Hechizos_Abierto_rune.png" class="inicial"></a>
+            </div>
+            <p class="superior">Mis hobbies</p>
+            <ul align="right">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../HTML/Magic.html">MTG</a></li>
+                <li><a href="../HTML/dnd.html">D&D</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="cuerpo">
+        <h1>¿Qué es D&D?</h1>
+        <img src="../src/img/Dados.png" class="lateralDerecho">
+        <p>
+            Dungeons and Dragons o en español Dragones y Mazmorras, es uno de los juegos más representativos de rol de edad media y
+             fantasía. En D&D, puedes encarnar uno de los siguientes roles: DM (Dungeon Master), jugador o escritor.
+        </p>
+        <h2>Dungeon Master</h2>
+        <p>
+            El DM, el encargado de que toda la historia fluya con naturalidad alrededor de los personajes protagonistas (Jugadores).
+             Sin el rol de DM, no se podría avanzar en ninguna historia del juego ya que es su trabajo el controlar tanto los elementos del
+             entorno como a los NPC (Non Playable Characters) y a los enemigos.  
+        </p>
+        <h2>Jugador</h2>
+        <p>
+            Los jugadores, aquellos que crean su personaje desde un punto de vista estratégico, alocado, o por simple diversión, ellos serán
+            los que más inversos se sentirán durante las sesiones de juego, ya que sus acciones repercuten de forma directa en las acciones que
+            tomará el DM.
+        </p>
+        <h2>Escritor</h2>
+        <p>
+            Tenemos al DM y a los jugadores pero, ¿qué sería de los personajes si no tienen una historia que seguir? Como escritor, serás el encargado
+            de escribir historias con diferentes rutas para los jugadores, tendrás que tener en cuenta un único inicio de la historia, pero tendrás que
+            tener en mente que tendrás muchos finales (A cuanto más se extienda tu historia, más finales podrás o deberás de añadir).
+        </p>
+        <br><br>
+        <h1>La creación de un personaje</h1>
+        <p>
+            Como DM, simplemente tendrás que seguir las indicaciones de la historia, pero como jugador, tus decisiones con respecto a la creación de tu personaje,
+            es totalmente libre, tendrás que elegir entre ciertas especies, subrazas, atributos físicos y mentales etc. A continuación te dejo una "ficha de personaje"
+            y un video justo debajo para que aprendas a crear tu propio personaje.
+        </p>
+        <br>
+            <fieldset class="ficha">
+                <legend align="center">Ficha de personaje</legend>
+                <!--Parte superior de la ficha-->
+                <fieldset>
+                    <legend>Datos del personaje</legend>
+                    Nombre:<input type="text" id="nombre" class="name">
+                    <div style="float: right; text-align-last: justify;">
+                        <fieldset>
+                            Clase<input type="text">
+                            Nivel<input type="number">
+                            Trasfondo<select name="Trasfondo" id="trasfondo">
+                                <option value="1">Acólito</option>
+                                <option value="2">Animador</option>
+                                <option value="3">Artesano Gremial</option>
+                                <option value="4">Charlatán</option>
+                                <option value="5">Criminal</option>
+                                <option value="6">Ermitaño</option>
+                                <option value="7">Erudito</option>
+                                <option value="8">Héroe del pueblo</option>
+                                <option value="9">Huérfano</option>
+                                <option value="10">Marinero</option>
+                                <option value="11">Noble</option>
+                                <option value="12">Salvaje</option>
+                                <option value="13">Soldado</option>
+                            </select>
+                            Nombre del jugador<input type="text" class="name">
+                            <br>
+                            <button onclick="cambiaSubrazas()">Obtener subrazas</button>
+                            Raza <select id="raza" name="raza" title="Seleccione raza">
+                                <option value="0">-Seleccione-</option>
+                                <option value="1">Dracónido</option>
+                                <option value="2">Elfo</option>
+                                <option value="3">Enano</option>
+                                <option value="4">Gnomo</option>
+                                <option value="5">Humano</option>
+                                <option value="6">Mediano</option>
+                                <option value="7">Semielfo</option>
+                                <option value="8">Semiorco</option>
+                                <option value="9">Tiefling</option>
+                            </select>
+                            Subraza <select name="Subraza" id="subraza">
+
+                            </select>
+                            Alineamiento <select name="Alineamiento" id="alineamiento">
+                                <option value="1">Legal-Bueno</option>
+                                <option value="2">Neutral-Bueno</option>
+                                <option value="3">Caótico-Bueno</option>
+                                <option value="4">Legal-Neutral</option>
+                                <option value="5">Neutral verdadero</option>
+                                <option value="6">Caótico-Neutral</option>
+                                <option value="7">Legal-Malo</option>
+                                <option value="8">Neutral-Malo</option>
+                                <option value="9">Caótico-Malo</option>
+                            </select>
+                            EXP: <input type="number">
+                        </fieldset>
+                    </div>
+                </fieldset>
+                <!--Fin de la parte superior de la ficha-->
+                <div class="columna">
+                    <fieldset>
+                        <legend align="center">Atributos</legend>
+                        <!--Todos los atributos de la ficha-->
+                        <fieldset>
+                            <legend align="center">Fuerza</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Destreza</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Constitución</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Inteligencia</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Sabiduría</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Carisma</legend>
+                            <div align="center">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                <input type="number" class="bonoAtributo">
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                </div>
+                <!--Fin de los atributos-->
+                <!--Segunda columna de contenido-->
+                <div class="columna">
+                    <input type="number" class="casillaPrincipalAtributo">Inspiración <br>
+                    <input type="number" class="casillaPrincipalAtributo">Bono de competencia
+                    <fieldset>
+                        <legend align="center">Tiradas de salvación</legend>
+                        <input name="salvacion" type="radio"> <input type="number" class="check"> Fuerza <br>
+                        <input name="salvacion" type="radio"> <input type="number" class="check"> Destreza <br>
+                        <input name="salvacion" type="radio"> <input type="number" class="check"> Constitución <br>
+                        <input name="salvacion" type="radio"> <input type="number" class="check"> Inteligencia <br>
+                        <input name="salvacion" type="radio"> <input type="number" class="check"> Carisma <br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend align="center">Habilidades</legend>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Atletismo <i>(Fue)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Acrobacias <i>(Des)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Juego de manos <i>(Des)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Sigilo <i>(Des)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Arcana <i>(Int)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Historia <i>(Int)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Investigación <i>(Int)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Naturaleza <i>(Int)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Religión <i>(Int)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Medicina <i>(Sab)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Percepción <i>(Sab)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Perspicacia <i>(Sab)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Supervivencia <i>(Sab)</i> <br>
+                        <input name="habilidades" type="radio"> <input type="number" class="check"> Trato con Animales <i>(Sab)</i> <br><br>
+                    </fieldset>
+                    <div align="center" style="margin: 5px;">
+                        <input type="number" class="casillaPrincipalAtributo">
+                        Sabiduría Pasiva (Percepción)
+                    </div>
+                    <fieldset align="center">
+                        <legend align="center">Otras competencias e idiomas</legend>
+                        <textarea name="rasgosAtributos" id="rasgosAtributos" rows="6"></textarea>
+                    </fieldset>
+                </div>
+                <!--Fin de columna 2-->
+                <!--Inicio de columna 3-->
+                <div class="columna">
+                    <fieldset>
+                        <div>
+                            <div align="center" style="float: left; margin: 5px;">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                Clase de <br> armadura
+                            </div>
+                            <div align="center" style="float: left; margin: 5px;">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                Iniciativa
+                            </div>
+                            <div align="center" style="float: left; margin: 5px;">
+                                <input type="number" class="casillaPrincipalAtributo"> <br>
+                                Velocidad
+                            </div>
+                        </div>
+                        <!--Puntos de golpe-->
+                        <div align="center">
+                            <fieldset>
+                                Puntos de golpe máximos <input type="number"> <br>
+                                <textarea name="puntosActuales" id="puntosActuales" cols="20" rows="2"></textarea>
+                                <hr>
+                                <textarea name="puntosActuales" id="puntosActuales" cols="20" rows="2"></textarea><br>
+                                Puntos de golpe temporales
+                            </fieldset>
+                            <fieldset>
+                                <legend align="center">Ataques y conjuros</legend>
+                                <textarea name="ataquesConjuros" id="ataquesConjuros" rows="11"></textarea>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                    <fieldset align="center">
+                        <legend align="center">Equipo</legend>
+                        <textarea name="equipo" id="equipo" rows="9"></textarea>
+                    </fieldset>
+                </div>
+                <!--Fin columna 3-->
+                <!--Inicio columna 4-->
+                <div class="columna">
+                    <fieldset>
+                        <fieldset>
+                            <legend align="center">Rasgos de la personalidad</legend>
+                            <textarea name="ataquesConjuros" id="ataquesConjuros" rows="3"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Ideales</legend>
+                            <textarea name="ideales" id="ideales" rows="3"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Vínculos</legend>
+                            <textarea name="vinculos" id="vinculos" rows="3"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Defectos</legend>
+                            <textarea name="defectos" id="defectos" rows="3"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <legend align="center">Rasgos y atributos</legend>
+                            <textarea name="rasgosAtributos" id="rasgosAtributos" rows="15"></textarea>
+                        </fieldset>
+                    </fieldset>
+                </div>
+                <!--Fin columna 4-->
+            </fieldset>
+        <div align="center" style="margin-top: 120px;"><video controls src="../src/video/ficha.mp4"></video></div>
+    </div>
+    <div class="pie">
+        <footer>
+            <img src="../src/img/we_love_casting_spells.png" alt="We love casting spells" class="lateralIzquierdo">
+            <table>
+                <tbody>
+                    <thead>
+                        <th>Información del alumno</th>
+                        <th>Webgrafía</th>
+                        <th>Feedback</th>
+                        <th></th>
+                    </thead>
+                    <tr>
+                        <td>Raúl Herrá Velasco</td>
+                        <td><a href="https://magic.wizards.com/es">Magic the Gathering</a></td>
+                        <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacta conmigo</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>raulhv105@gmail.com</td>
+                        <td><a href="https://dnd.wizards.com/es">Dungeons and Dragons</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h5 class="final" align="center">@Derechos reservados de los productos mencionados 1993-2023 Wizards of the coast <br>
+            @Código creado por Raúl Herrá Velasco</h5>
+        </footer>
+    </div>
+    <script src="../JS/dnd.js"></script>
+</body>
+</html>

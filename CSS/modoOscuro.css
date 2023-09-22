@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html, body{
+    color: white;
+    background-color: #0A0805;
+    scroll-behavior: smooth;
+}
+
+/*Configuración para el header*/
+#capa1{ z-index:1; }
+
+.cabecera{
+    min-width: 100%;
+    max-height: 1%;
+}
+header{
+    border-bottom: 3px solid #fb0040;
+    background-color: #222222;
+    padding: 1%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+header ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 1%;
+    font-size: xx-large;
+    padding: 1%;
+}
+
+img.inicial{
+    float: left;
+    width: 5%;
+}
+
+.imagen p{
+    margin-top: 10px;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: large;
+}
+
+.superior{
+    margin-top: 20px;
+    float: left;
+    color: #eeeeee;
+    font-size: x-large;
+}
+
+header ul li a{
+    color: #eeeeee;
+    text-decoration: none;
+    transition: 0.5s;
+    border: 5px solid #b95120;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+header ul li a:hover{
+    color: #b95120;
+    text-decoration: none;
+    background-color: #303030;
+    transition: 0.5s;
+}
+
+/*Configuración del cuerpo*/
+
+div.cuerpo{
+    padding: 7%;
+}
+
+.cuerpo{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: larger;
+    text-align: justify;
+    background-color: #121212;
+}
+
+h1{
+    color: #999;
+}
+
+h2{
+    color: #888;
+    margin-top: 50px;
+}
+h3{
+    color: #777;
+}
+
+button{
+    background-color: #222222;
+    color: white;
+}
+
+p{
+    text-indent: 50px;
+    font-size: 95%;
+}
+
+a{
+    color: #fb0040;
+    transition: 0.5s;
+}
+a:hover{
+    color: #4000fb;
+    transition: 0.5s;
+}
+
+i{
+    color: #555;
+}
+
+i:hover{
+    cursor: default;
+    color: #aaa;
+}
+
+/*Imagenes*/
+
+img.lateralDerecho{
+    float: right;
+    border-radius: 250px;
+    max-width: 250px;
+    margin: 10px;
+}
+
+img.lateralIzquierdo{
+    float: left;
+    border-radius: 200px;
+    min-width: 250px;
+    max-width: 750px;
+    position: absolute;
+    margin: 10px;
+}
+
+/*Videos iframe*/
+video{
+    border: 5px solid #fb0040;
+    border-radius: 50px;
+    max-width: 100%;
+}
+
+/*Configuración para el footer*/
+
+.pie{
+    min-width: 100%;
+}
+
+footer{
+    background-color: #222222;
+    border-top: 3px solid #fb0040;
+    width: 100%;
+}
+
+footer table{
+    padding: 50px;
+    float: right;
+}
+
+footer td{
+    padding: 10px;
+    color: #aaa;
+}
+footer th{
+    padding-bottom: 10px;
+    color: #ccc;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.final{
+    margin-top: 250px;
+    color: #aaa;
+}
+
+/*inputs*/
+input{
+    background-color: #0A0805;
+    color: #ccc;
+    width: 50px;
+}
+
+/*Magic the gathering*/
+/*Sección de imagenes*/
+section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+section img{
+    border-radius: 20px;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: 0.5s ease;
+}
+section img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    transition: 0.5s ease;
+}
+
+img.encendido{
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/*D&D*/
+/*Ficha de personaje*/
+
+.name{
+    width: 15%;
+}
+
+select{
+    background-color: #0A0805;
+    color: white;
+}
+
+.ficha{
+    justify-content: stretch;
+    max-width: max-content;
+}
+
+.ficha input{
+    border-radius: 15px;
+}
+
+.casillaPrincipalAtributo{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.bonoAtributo{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+div.columna{
+    display: inline-table;
+}
+
+.check{
+    width: 35px;
+}
+
+textarea{
+    background-color: #0A0805;
+    color: #aaa;
+    text-align: center;
+    resize: none;
+    font-size: larger;
+}
